@@ -15,9 +15,10 @@ import { AppFirstLetterUpparcaseComponent } from './components/folder-v1-compo/f
 import { AppGenderComponent } from './components/folder-v1-compo/gender.component';
 import { AppIndianPhoneNumberFormatComponent } from './components/folder-v1-compo/indian-phone-number-format.component';
 import { AppInitialsNameComponent } from './components/folder-v1-compo/initials-name.component';
+import { AppJsonPrettyPrintComponent } from './components/folder-v1-compo/json-pretty-print.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'InitialsName', pathMatch: 'full' },
+  { path: '', redirectTo: 'JsonPrettyPrint', pathMatch: 'full' },
 
   // Aggregate Component
   { path: 'groupBy', component: AppGroupByComponent },
@@ -44,4 +45,5 @@ export const routes: Routes = [
     component: AppIndianPhoneNumberFormatComponent,
   },
   { path: 'InitialsName', component: AppInitialsNameComponent },
+  { path: 'JsonPrettyPrint', component: AppJsonPrettyPrintComponent },
 ];
