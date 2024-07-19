@@ -29,11 +29,16 @@ import { AppTimeDurationComponent } from './components/folder-v1-compo/time-dura
 import { AppTruncateTextComponent } from './components/folder-v1-compo/truncate-text.component';
 import { AppAgeCalculationComponent } from './components/aggregate-compo/age-calculation.component';
 import { AppFormatDateComponent } from './components/aggregate-compo/format-date.component';
+import { AppDefaultsComponent } from './components/objects-compo/default.component';
+import { AppPrintObjKeysComponent } from './components/objects-compo/printObjKeyPipe.component';
+import { AppToArrayComponent } from './components/objects-compo/printObjValuePipe.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'formatDate', pathMatch: 'full' },
+  // { path: '', redirectTo: 'defaults', pathMatch: 'full' },
 
-  // Aggregate Component
+  /*---------------------------------------------------------------------------
+                              Aggregate Component
+  ---------------------------------------------------------------------------*/
   { path: 'groupBy', component: AppGroupByComponent },
   { path: 'maxNum', component: AppMaxNumComponent },
   { path: 'minNum', component: AppMinNumComponent },
@@ -42,7 +47,9 @@ export const routes: Routes = [
   { path: 'ageCalculation', component: AppAgeCalculationComponent },
   { path: 'formatDate', component: AppFormatDateComponent },
 
-  // Folder-v1 Component
+  /*---------------------------------------------------------------------------
+                              Folder-v1 Component
+  ---------------------------------------------------------------------------*/
   { path: 'activestatus', component: AppActiveStatusComponent },
   { path: 'camelCaseToSpaces', component: AppCamelCaseToSpacesComponent },
   { path: 'colorContrast', component: AppColorContrastComponent },
@@ -78,4 +85,12 @@ export const routes: Routes = [
   { path: 'timeAgo', component: AppTimeAgoComponent },
   { path: 'timeDuration', component: AppTimeDurationComponent },
   { path: 'truncateText', component: AppTruncateTextComponent },
+
+  { path: '', redirectTo: 'toArray', pathMatch: 'full' },
+  /*---------------------------------------------------------------------------
+                              Object-Pipe Component
+  ---------------------------------------------------------------------------*/
+  { path: 'defaults', component: AppDefaultsComponent },
+  { path: 'printObjKey', component: AppPrintObjKeysComponent },
+  { path: 'toArray', component: AppToArrayComponent },
 ];
