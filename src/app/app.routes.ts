@@ -1,8 +1,15 @@
 import { Routes } from '@angular/router';
+import { AppAgeCalculationComponent } from './components/aggregate-compo/age-calculation.component';
+import { AppFormatDateComponent } from './components/aggregate-compo/format-date.component';
+import { AppGroupByComponent } from './components/aggregate-compo/groupBy.component';
 import { AppMaxNumComponent } from './components/aggregate-compo/maxNum.component';
 import { AppMeanComponent } from './components/aggregate-compo/mean.component';
 import { AppMinNumComponent } from './components/aggregate-compo/minNum.component';
 import { AppSumComponent } from './components/aggregate-compo/sum.component';
+import { AppDeepComponent } from './components/array-compo/deep.component';
+import { AppDropComponent } from './components/array-compo/drop.component';
+import { AppEmptyComponent } from './components/array-compo/empty.component';
+import { AppFlattenComponent } from './components/array-compo/flatten.component';
 import { AppActiveStatusComponent } from './components/folder-v1-compo/active-status.component';
 import { AppCamelCaseToSpacesComponent } from './components/folder-v1-compo/camel-Case-To-Spaces.component';
 import { AppColorContrastComponent } from './components/folder-v1-compo/color-contrast.component';
@@ -15,7 +22,6 @@ import { AppGenderComponent } from './components/folder-v1-compo/gender.componen
 import { AppIndianPhoneNumberFormatComponent } from './components/folder-v1-compo/indian-phone-number-format.component';
 import { AppInitialsNameComponent } from './components/folder-v1-compo/initials-name.component';
 import { AppJsonPrettyPrintComponent } from './components/folder-v1-compo/json-pretty-print.component';
-import { AppGroupByComponent } from './components/aggregate-compo/groupBy.component';
 import { AppMaskComponent } from './components/folder-v1-compo/mask.component';
 import { AppNumericalToRomanComponent } from './components/folder-v1-compo/numerical-to-roman.component';
 import { AppOrdinalNumberComponent } from './components/folder-v1-compo/ordinal-Number.component';
@@ -27,11 +33,10 @@ import { AppSortArrayAscDescOrderComponent } from './components/folder-v1-compo/
 import { AppTimeAgoComponent } from './components/folder-v1-compo/time-ago.component';
 import { AppTimeDurationComponent } from './components/folder-v1-compo/time-duration.component';
 import { AppTruncateTextComponent } from './components/folder-v1-compo/truncate-text.component';
-import { AppAgeCalculationComponent } from './components/aggregate-compo/age-calculation.component';
-import { AppFormatDateComponent } from './components/aggregate-compo/format-date.component';
 import { AppDefaultsComponent } from './components/objects-compo/default.component';
 import { AppPrintObjKeysComponent } from './components/objects-compo/printObjKeyPipe.component';
 import { AppToArrayComponent } from './components/objects-compo/printObjValuePipe.component';
+import { AppcDecodeURIComponent } from './components/string-compo/decodeURI.component';
 
 export const routes: Routes = [
   // { path: '', redirectTo: 'defaults', pathMatch: 'full' },
@@ -86,11 +91,24 @@ export const routes: Routes = [
   { path: 'timeDuration', component: AppTimeDurationComponent },
   { path: 'truncateText', component: AppTruncateTextComponent },
 
-  { path: '', redirectTo: 'toArray', pathMatch: 'full' },
   /*---------------------------------------------------------------------------
                               Object-Pipe Component
   ---------------------------------------------------------------------------*/
   { path: 'defaults', component: AppDefaultsComponent },
   { path: 'printObjKey', component: AppPrintObjKeysComponent },
   { path: 'toArray', component: AppToArrayComponent },
+
+  /*---------------------------------------------------------------------------
+                              String-Pipe Component
+  ---------------------------------------------------------------------------*/
+  { path: 'decodeURI', component: AppcDecodeURIComponent },
+
+  { path: '', redirectTo: 'flatten', pathMatch: 'full' },
+  /*---------------------------------------------------------------------------
+                              Array-Pipe Component
+  ---------------------------------------------------------------------------*/
+  { path: 'deep', component: AppDeepComponent },
+  { path: 'drop', component: AppDropComponent },
+  { path: 'empty', component: AppEmptyComponent },
+  { path: 'flatten', component: AppFlattenComponent },
 ];
