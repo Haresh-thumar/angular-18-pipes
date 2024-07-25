@@ -10,6 +10,15 @@ import { AppDeepComponent } from './components/array-compo/deep.component';
 import { AppDropComponent } from './components/array-compo/drop.component';
 import { AppEmptyComponent } from './components/array-compo/empty.component';
 import { AppFlattenComponent } from './components/array-compo/flatten.component';
+import { AppHeadComponent } from './components/array-compo/head.component';
+import { AppJoinComponent } from './components/array-compo/join.component';
+import { AppLastComponent } from './components/array-compo/last.component';
+import { AppMapComponent } from './components/array-compo/map.component';
+import { AppPluckComponent } from './components/array-compo/pluck.component';
+import { AppReverseComponent } from './components/array-compo/reverse.component';
+import { AppTakeComponent } from './components/array-compo/take.component';
+import { AppTakeWhileComponent } from './components/array-compo/takeWhile.component';
+import { AppUniqComponent } from './components/array-compo/uniq.component copy';
 import { AppActiveStatusComponent } from './components/folder-v1-compo/active-status.component';
 import { AppCamelCaseToSpacesComponent } from './components/folder-v1-compo/camel-Case-To-Spaces.component';
 import { AppColorContrastComponent } from './components/folder-v1-compo/color-contrast.component';
@@ -103,7 +112,7 @@ export const routes: Routes = [
   ---------------------------------------------------------------------------*/
   { path: 'decodeURI', component: AppcDecodeURIComponent },
 
-  { path: '', redirectTo: 'flatten', pathMatch: 'full' },
+  { path: '', redirectTo: 'uniq', pathMatch: 'full' },
   /*---------------------------------------------------------------------------
                               Array-Pipe Component
   ---------------------------------------------------------------------------*/
@@ -111,4 +120,13 @@ export const routes: Routes = [
   { path: 'drop', component: AppDropComponent },
   { path: 'empty', component: AppEmptyComponent },
   { path: 'flatten', component: AppFlattenComponent },
+  { path: 'head', component: AppHeadComponent },
+  { path: 'join', component: AppJoinComponent },
+  { path: 'last', component: AppLastComponent },
+  { path: 'map', component: AppMapComponent },
+  { path: 'pluck', component: AppPluckComponent },
+  { path: 'reverse', component: AppReverseComponent },
+  { path: 'takeWhile', component: AppTakeWhileComponent },
+  { path: 'take', component: AppTakeComponent },
+  { path: 'uniq', component: AppUniqComponent },
 ];
